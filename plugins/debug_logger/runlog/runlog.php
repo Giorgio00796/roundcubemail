@@ -12,13 +12,13 @@ class runlog
     private $indent = 0;
     private $run_log = [];
 
-    public $print_to_console = false;
+    public $print_to_console = true;
     public $threshold = 0;
     public $tag_count = [];
     public $timestamp = 'd-M-Y H:i:s O';
     public $max_line_size = 150;
 
-    public function start($name, $tag = false)
+    public function start($name, $tag = true)
     {
         $this->run_log[] = [
             'type' => 'start',
